@@ -29,9 +29,13 @@ function createPicker(): BrowserWindow {
       preload: join(__dirname, "../preload/index.mjs"),
       contextIsolation: true,
       nodeIntegration: false,
+      sandbox: false,
     },
   });
 
+  window.webContents.on("did-fail-load", (_event, errorCode, errorDescription, validatedURL) => {
+    console.error(`Pane renderer failed to load (${errorCode}): ${errorDescription} ${validatedURL}`);
+  });
   window.on("close", (event) => {
     if (!isQuitting) {
       event.preventDefault();
