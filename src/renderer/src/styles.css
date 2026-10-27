@@ -1,0 +1,36 @@
+:root {
+  font-family: "Segoe UI", sans-serif;
+  color: #f4f5f7;
+  background: #171923;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+main {
+  padding: 28px;
+}
+
+.eyebrow {
+  color: #939bb0;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin: 6px 0 0;
+  font-size: 30px;
+}
+
+.description {
+  color: #a5abc0;
+  line-height: 1.5;
+}
